@@ -22,9 +22,9 @@ const people = [
 
 const Peoples = () => {
     return <ul>
-                {people.map((people) => (
+                {people.map((p) => (
                     <li className="py-4">
-                        <People name={people.name} email={people.email} image={people.image} />
+                        <People name={p.name} email={p.email} image={p.image} />
                     </li>
                 ))}
                 

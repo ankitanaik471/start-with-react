@@ -3,7 +3,14 @@ import Product from "./product/Product";
 
 
 const Products = () => {
-    return <Product/>
+    return <ul>
+        <li>
+            <Product/>
+        </li>
+        <li>
+            <Product/>
+        </li>
+    </ul>
 }
 
 export default Products;
