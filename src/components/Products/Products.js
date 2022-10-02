@@ -3,6 +3,7 @@ import Product from "./product/Product";
 
 const Product_List = [
     {
+        id: '1',
         p_name: 'Product One',
         p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         p_price: '140.45',
@@ -10,6 +11,7 @@ const Product_List = [
         p_available: 'Available'
     },
     {
+        id: '2',
         p_name: 'Product two',
         p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         p_price: '150.45',
@@ -17,6 +19,7 @@ const Product_List = [
         p_available: 'Available'
     },
     {
+        id: '3',
         p_name: 'Product three',
         p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         p_price: '160.45',
@@ -24,6 +27,7 @@ const Product_List = [
         p_available: 'Available'
     },
     {
+        id: '4',
         p_name: 'Product four',
         p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         p_price: '155.45',
@@ -34,12 +38,13 @@ const Product_List = [
 
 const Products = () => {
     return <ul>
-        <li>
-            {
-                Product_List.map((product) => console.log(product.p_desc))
-            }
-            <Product/>
-        </li>
+        {
+            Product_List.map((product) =>(
+                <li>
+                <Product key={product.id} name={product.p_name} desc={product.p_desc} price={product.p_price} img={product.p_img} status={product.p_available}/>
+                </li>
+            ))
+        }
     </ul>
 }
 
