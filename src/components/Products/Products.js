@@ -40,8 +40,8 @@ const Products = () => {
     return <ul>
         {
             Product_List.map((product) =>(
-                <li>
-                <Product key={product.id} name={product.p_name} desc={product.p_desc} price={product.p_price} img={product.p_img} status={product.p_available}/>
+                <li key={product.id}>
+                    <Product name={product.p_name} desc={product.p_desc} price={product.p_price} img={product.p_img} status={product.p_available}/>
                 </li>
             ))
         }
