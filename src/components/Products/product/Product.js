@@ -1,7 +1,19 @@
-import React from "react";
 import Button from "../../UI/button/Button";
+import React from "react";
 
 const Product = (props) => {
+     let productCount = 0;
+
+     const incrementProductCount = () => {
+          productCount++;
+          console.log(productCount);
+     }
+
+     const decrementProductCount = () => {
+          productCount--;
+          console.log(productCount);
+     }
+
      let isAvailable = props.status;
 
      let active = 'text-xs rounded p-1 ';
@@ -14,9 +26,9 @@ const Product = (props) => {
                     <p className="text-sm py-2">{props.desc}</p>
                     <div className="space-x-4">
                          <span className="text-base">{props.price}</span>
-                         <Button>-</Button>
-                         <span>Items</span>
-                         <Button>+</Button>
+                         <Button eventHandler={decrementProductCount}>-</Button>
+                         <span>{ productCount === 0 ? 'zero' : productCount }</span>
+                         <Button eventHandler={incrementProductCount}>+</Button>
                          <span className={active}>{isAvailable}</span>
                     </div>
                </div>
