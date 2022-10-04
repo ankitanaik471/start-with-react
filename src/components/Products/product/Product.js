@@ -1,5 +1,5 @@
 import React from "react";
-
+import Button from "../../UI/button/Button";
 
 const Product = (props) => {
      let isAvailable = props.status;
@@ -14,6 +14,9 @@ const Product = (props) => {
                     <p className="text-sm py-2">{props.desc}</p>
                     <div className="space-x-4">
                          <span className="text-base">{props.price}</span>
+                         <Button>-</Button>
+                         <span>Items</span>
+                         <Button>+</Button>
                          <span className={active}>{isAvailable}</span>
                     </div>
                </div>
