@@ -1,16 +1,18 @@
 import Button from "../../UI/button/Button";
-import React from "react";
+import React, {useState} from "react";
 
 const Product = (props) => {
-     let productCount = 0;
+     // let productCount = 0;
+
+     let [productCount, updateproductCount] = useState(0);
 
      const incrementProductCount = () => {
-          productCount++;
+          updateproductCount(++productCount);
           console.log(productCount);
      }
 
      const decrementProductCount = () => {
-          productCount--;
+          updateproductCount(--productCount);
           console.log(productCount);
      }
 
@@ -27,7 +29,7 @@ const Product = (props) => {
                     <div className="space-x-4">
                          <span className="text-base">{props.price}</span>
                          <Button eventHandler={decrementProductCount}>-</Button>
-                         <span>{ productCount === 0 ? 'zero' : productCount }</span>
+                         <span>{ productCount }</span>
                          <Button eventHandler={incrementProductCount}>+</Button>
                          <span className={active}>{isAvailable}</span>
                     </div>
