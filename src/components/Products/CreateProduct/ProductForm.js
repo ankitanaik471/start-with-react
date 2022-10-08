@@ -16,9 +16,17 @@ const ProductForm = () => {
     })
 
     const addProductNameInputHandler = (e) => {
-        setUserInput({
-            ...userInput,
-            name: e.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     name: e.target.value
+        // })
+
+        // By Callback functions 
+        setUserInput((previousState) => {
+            return {
+                ...previousState,
+                name: e.target.value
+            }
         })
     }
 
