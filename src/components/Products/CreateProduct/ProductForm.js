@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const ProductForm = () => {
+const ProductForm = (props) => {
     let [name, setName] = useState('');
     let [description, setDescription] = useState('');
     let [price, setPrice] = useState('');
@@ -82,7 +82,9 @@ const ProductForm = () => {
             image: image
         }]
 
-        console.log(Product)
+        // console.log(Product)
+
+        props.createProduct(Product);
 
         setName('');
         setPrice('');

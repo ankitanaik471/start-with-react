@@ -1,9 +1,15 @@
 import ProductForm from "./ProductForm";
 
-const CreateProduct = () => {
+const CreateProduct = (props) => {
+   const onCreateProduct = (product) => {
+      // console.log(product)
+
+      props.createProduct(product);
+   }
+
     return (
       <div>
-            <ProductForm></ProductForm>
+            <ProductForm createProduct={onCreateProduct}></ProductForm>
       </div>
     )
 }

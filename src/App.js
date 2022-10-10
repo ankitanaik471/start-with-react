@@ -5,13 +5,17 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import CreateProduct from "./components/Products/CreateProduct/CreateProduct";
 
 function App() {
+  const OnCreateProductEvent = (product) => {
+    console.log(product);
+  }
+
   return (
     <div className="App">
       <Header />
       <div className="flex justify-between">
         <div className="grow p-4">
           <Products />
-          <CreateProduct />
+          <CreateProduct createProduct={OnCreateProductEvent} />
         </div>
         <div className="p-4">
           <Sidebar/>
