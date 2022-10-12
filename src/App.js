@@ -3,6 +3,7 @@ import Products from "./components/Products/Products";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import CreateProduct from "./components/Products/CreateProduct/CreateProduct";
+import FilterProduct from "./components/Products/FilterProduct/FilterProduct";
 
 const Product_List = [
   {
@@ -42,9 +43,25 @@ const Product_List = [
 function App() {
   let [productList, updateProductlist] = useState(Product_List);
 
+  let [filteredProduct, updateFilteredProduct] =useState('all');
+
+  let filteredProductList = productList.filter((product) => {
+    if(filteredProduct === 'Available'){
+      return product.p_available === 'Available';
+    } else if (filteredProduct === 'unAvailable'){
+      return product.p_available === 'unAvailable';
+    } else{
+      return product;
+    }
+  })
+
   const OnCreateProductEvent = (product) => {
     console.log(product, productList)
     updateProductlist([product, ...productList]);
+  }
+
+  const onFilterProductEvent = (filter) => {
+    updateFilteredProduct(filter);
   }
 
   return (
@@ -52,8 +69,9 @@ function App() {
       <Header />
       <div className="flex justify-between">
         <div className="grow p-4">
-          <Products ProductList={productList} />
           <CreateProduct createProduct={OnCreateProductEvent} />
+          <FilterProduct filterProduct={onFilterProductEvent} />
+          <Products ProductList={filteredProductList} />
         </div>
         <div className="p-4">
           <Sidebar/>
