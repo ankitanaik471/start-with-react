@@ -74,13 +74,14 @@ const ProductForm = (props) => {
 
         event.preventDefault();
 
-        let Product = [{
-            name: name,
-            price: Number(price),
-            description: description,
-            available: Boolean(available),
-            image: image
-        }]
+        let Product = {
+            id: Math.random(),
+            p_name: name,
+            p_price: Number(price),
+            p_desc: description,
+            p_available: Boolean(available) === true ? 'Available': 'unAvailable',
+            p_img: image === 'random path' ? '' : 'https://via.placeholder.com/150'
+        }
 
         // console.log(Product)
 
