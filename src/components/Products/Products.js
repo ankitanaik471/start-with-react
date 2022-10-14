@@ -4,7 +4,9 @@ import Product from "./product/Product";
 
 
 const Products = (props) => {
-    return <ul>
+    
+    return props.ProductList.length === 0 ? <h3>No products Available</h3> :
+    (<ul>
         {
             props.ProductList.map((product) =>(
                 <li key={product.id}>
@@ -12,7 +14,7 @@ const Products = (props) => {
                 </li>
             ))
         }
-    </ul>
+    </ul>)
 }
 
 export default Products;
