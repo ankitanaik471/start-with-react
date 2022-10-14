@@ -123,6 +123,7 @@ const ProductForm = (props) => {
         </div>
 
         <button type="submit" className="pointer-events-auto rounded-md bg-indigo-600 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">Submit</button>
+        <button type="button" onClick={props.onCancel} className="pointer-events-auto rounded-md bg-indigo-600 py-2 px-3 mx-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">Cancel</button>
     </form>
         
     )
