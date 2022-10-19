@@ -28,10 +28,11 @@ const Product = (props) => {
                     <p className="text-sm py-2">{props.desc}</p>
                     <div className="space-x-4">
                          <span className="text-base">{props.price}</span>
-                         <Button eventHandler={decrementProductCount}>-</Button>
+                         <Button eventHandler={decrementProductCount} disable={productCount === 0}>-</Button>
                          <span>{ productCount }</span>
-                         <Button eventHandler={incrementProductCount}>+</Button>
+                         <Button eventHandler={incrementProductCount} disable={productCount === props.stock}>+</Button>
                          <span className={active}>{isAvailable}</span>
+                         <span>Stock {props.stock}</span>
                     </div>
                </div>
                <div>

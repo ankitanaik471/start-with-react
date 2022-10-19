@@ -10,7 +10,7 @@ const Products = (props) => {
         {
             props.ProductList.map((product) =>(
                 <li key={product.id}>
-                    <Product id={product?.id} name={product.p_name} desc={product.p_desc} price={product.p_price} img={product.p_img} status={product.p_available}/>
+                    <Product id={product?.id} name={product.p_name} desc={product.p_desc} price={product.p_price} img={product.p_img} status={product.p_available} stock={product.p_stock}/>
                 </li>
             ))
         }

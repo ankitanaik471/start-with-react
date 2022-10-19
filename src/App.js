@@ -12,7 +12,8 @@ const Product_List = [
       p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       p_price: '140.45',
       p_img: 'https://via.placeholder.com/150',
-      p_available: 'Available'
+      p_available: 'Available',
+      p_stock: 10
   },
   {
       id: 2,
@@ -20,7 +21,8 @@ const Product_List = [
       p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       p_price: '150.45',
       p_img: 'https://via.placeholder.com/150',
-      p_available: 'Available'
+      p_available: 'Available',
+      p_stock: 10
   },
   {
       id: 3,
@@ -28,7 +30,8 @@ const Product_List = [
       p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       p_price: '160.45',
       p_img: 'https://via.placeholder.com/150',
-      p_available: 'Available'
+      p_available: 'Available',
+      p_stock: 10
   },
   {
       id: 4,
@@ -36,7 +39,8 @@ const Product_List = [
       p_desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       p_price: '155.45',
       p_img: 'https://via.placeholder.com/150',
-      p_available: 'unAvailable'
+      p_available: 'unAvailable',
+      p_stock: 10
   }
 ]
 
